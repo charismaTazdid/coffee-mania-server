@@ -1,16 +1,4 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  HttpCode,
-  HttpStatus,
-  Param,
-  Patch,
-  Post,
-  Query,
-  Res,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query, Res } from '@nestjs/common';
 
 @Controller('coffees')
 export class CoffeesController {
@@ -19,6 +7,7 @@ export class CoffeesController {
     res.status(200).send('This action will return all the coffeee');
     // we can also utilize express response system by @Res decorator and with a parameter in our case it eis "res"
   }
+
   @Get('list')
   findAllCoffee() {
     return 'this action will return all the coffee form coffee list';
